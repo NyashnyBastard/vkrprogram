@@ -1,8 +1,10 @@
 package com.example.test1
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import  androidx.fragment.app.DialogFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,5 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
+    fun callRequest(view: View)
+    {
+        val callRequestIntent = Intent(this, MainActivity2::class.java)
+        startActivity(callRequestIntent)
+    }
+
+
 
 }
