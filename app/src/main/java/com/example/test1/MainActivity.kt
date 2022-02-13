@@ -18,6 +18,16 @@ class MainActivity : AppCompatActivity() {
         val callRequestIntent = Intent(this, MainActivity2::class.java)
         startActivity(callRequestIntent)
     }
+    fun chekList(view: View)
+    {
+        val chekListIntent = Intent(this,MainActivity3::class.java)
+        startActivity(chekListIntent)
+    }
+    fun Spis(view:View)
+    {
+        val SpisIntent = Intent(this, MainActivity4::class.java)
+        startActivity(SpisIntent)
+    }
 
 
 

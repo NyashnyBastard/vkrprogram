@@ -4,99 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    tools:context=".MainActivity3">
 
-    tools:context=".MainActivity2">
-
-
-    <ImageButton
-        android:id="@+id/back_b"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/material_on_background_disabled"
-        android:backgroundTint="@color/material_on_background_disabled"
-        android:onClick="getBack"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="16dp" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:onClick="getBackTo"
+            android:id="@+id/getBack"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="40dp"
+            android:background="@color/material_on_background_disabled"
+            android:foregroundGravity="left"
+            android:orientation="vertical"
+            app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
-
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip8"
+            android:id="@+id/chip5"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/teal_700"
-            android:checkable="true"
             android:fontFamily="@font/kadwa"
-            android:text="ПРОДУКТЫ"
-            android:textAlignment="center"
-            android:textColor="@color/tkl"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:typeface="sans"
-            app:checkedIconEnabled="true"
-            app:checkedIconVisible="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip9"
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/teal_700"
-            android:checkable="true"
-            android:fontFamily="@font/kadwa"
-            android:text="НАПИТКИ"
-            android:textAlignment="center"
-            android:textColor="@color/tkl"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            app:checkedIconEnabled="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip10"
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/teal_700"
-            android:checkable="true"
-            android:fontFamily="@font/kadwa"
-            android:text="Склад"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/tkl"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            app:checkedIconEnabled="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip11"
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/teal_700"
-            android:checkable="true"
-            android:fontFamily="@font/kadwa"
-            android:text="ХИМИЯ"
+            android:text="ЧЕК-ЛИСТ УТРО"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/tkl"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:typeface="normal"
-            app:checkedIconEnabled="true" />
+            android:typeface="normal" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip6"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_700"
+            android:fontFamily="@font/kadwa"
+            android:text="ЧЕК-ЛИСТ ОБЕД"
+            android:textAlignment="center"
+            android:textColor="@color/tkl"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_700"
+            android:fontFamily="@font/kadwa"
+            android:text="ЧЕК-ЛИСТ ВЕЧЕР"
+            android:textAlignment="center"
+            android:textColor="@color/tkl"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip7"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_700"
+            android:fontFamily="@font/kadwa"
+            android:text="КОНТРОЛЬ НАЧИНОК"
+            android:textAlignment="center"
+            android:textColor="@color/tkl"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
