@@ -6,22 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".MainActivity2">
+    tools:context=".RequestActivity">
 
 
-    <ImageButton
-        android:id="@+id/back_b"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/material_on_background_disabled"
-        android:backgroundTint="@color/material_on_background_disabled"
-        android:onClick="getBack"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="16dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:onClick="getBack"
+            android:id="@+id/getB"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="40dp"
+            android:background="@color/material_on_background_disabled"
+            android:foregroundGravity="left"
+            android:orientation="vertical"
+            app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -45,9 +48,9 @@
             android:textColor="@color/tkl"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:typeface="sans"
+            android:typeface="normal"
             app:checkedIconEnabled="true"
-            app:checkedIconVisible="true" />
+            app:checkedIconVisible="false" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip9"

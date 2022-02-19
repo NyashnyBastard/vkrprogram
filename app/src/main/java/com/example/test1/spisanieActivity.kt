@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class MainActivity4 : AppCompatActivity() {
+class spisanieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main4)
+        setContentView(R.layout.activity_spisanie)
     }
     fun getBack11(view: View)
     {
-        val getBack11Intent = Intent(this,MainActivity::class.java)
+        val getBack11Intent = Intent(this,MenuActivity::class.java)
         startActivity(getBack11Intent)
     }
 }

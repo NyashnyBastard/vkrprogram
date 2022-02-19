@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class MainActivity3 : AppCompatActivity() {
+class chekListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_chekList)
     }
     fun getBackTo(view: View)
     {
-        val getBackToIntent = Intent(this,MainActivity::class.java)
+        val getBackToIntent = Intent(this,MenuActivity::class.java)
         startActivity(getBackToIntent)
         finish()
     }

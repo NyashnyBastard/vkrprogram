@@ -4,28 +4,27 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import  androidx.fragment.app.DialogFragment
 
-class MainActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_menu)
 
     }
     fun callRequest(view: View)
     {
-        val callRequestIntent = Intent(this, MainActivity2::class.java)
+        val callRequestIntent = Intent(this, RequestActivity::class.java)
         startActivity(callRequestIntent)
     }
     fun chekList(view: View)
     {
-        val chekListIntent = Intent(this,MainActivity3::class.java)
+        val chekListIntent = Intent(this,chekListActivity::class.java)
         startActivity(chekListIntent)
     }
     fun Spis(view:View)
     {
-        val SpisIntent = Intent(this, MainActivity4::class.java)
+        val SpisIntent = Intent(this, spisanieActivity::class.java)
         startActivity(SpisIntent)
     }
 

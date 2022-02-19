@@ -5,16 +5,16 @@ import android.os.Bundle
 import android.content.Intent
 import android.view.View
 
-class MainActivity2 : AppCompatActivity() {
+class RequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_request)
     }
 
 
     fun getBack(view: View)
     {
-        val getBackIntent = Intent(this, MainActivity::class.java)
+        val getBackIntent = Intent(this, MenuActivity::class.java)
         startActivity(getBackIntent)
         finishAffinity()
     }

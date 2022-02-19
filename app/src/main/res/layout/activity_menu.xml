@@ -5,39 +5,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_end_color"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_weight="0"
-        android:visibility="invisible" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        android:layout_weight="0"
-        android:background="@color/material_on_surface_disabled"
-        android:baselineAlignBottom="false"
-        app:srcCompat="@drawable/test_messag"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="0"
-        android:background="#AC4848" />
+    tools:context=".MenuActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="180dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_weight="0"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="30dp"
+            android:layout_weight="0"
+            android:background="@color/material_on_background_disabled"
+            app:srcCompat="@drawable/test_messag" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
@@ -71,7 +68,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="199dp"
+        android:layout_height="145dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
@@ -101,18 +98,17 @@
         android:layout_width="match_parent"
         android:layout_height="142dp"
         android:layout_weight="0"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="visible">
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_gravity="right"
-            android:layout_marginLeft="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
             android:layout_weight="0"
             android:background="@color/material_on_background_disabled"
-            app:srcCompat="@drawable/test_task"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
     </LinearLayout>
 
 </LinearLayout>
