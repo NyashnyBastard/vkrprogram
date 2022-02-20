@@ -7,9 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MenuActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+
+
 
     }
     fun callRequest(view: View)
@@ -19,7 +23,7 @@ class MenuActivity : AppCompatActivity() {
     }
     fun chekList(view: View)
     {
-        val chekListIntent = Intent(this,chekListActivity::class.java)
+        val chekListIntent = Intent(this,cheklistActivity::class.java)
         startActivity(chekListIntent)
     }
     fun Spis(view:View)

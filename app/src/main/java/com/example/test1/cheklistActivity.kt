@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class chekListActivity : AppCompatActivity() {
+class cheklistActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chekList)
+        setContentView(R.layout.activity_cheklist)
     }
     fun getBackTo(view: View)
     {
