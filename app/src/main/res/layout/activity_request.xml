@@ -36,7 +36,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip8"
+            android:onClick="toProduct"
+            android:id="@+id/bProduct"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
