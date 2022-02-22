@@ -14,13 +14,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
-            android:onClick="getBack11"
             android:id="@+id/getBack1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="40dp"
             android:layout_weight="0"
-            android:background="@color/material_on_background_disabled"
+            android:backgroundTint="@color/material_on_primary_disabled"
+            android:onClick="getBack11"
             app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
@@ -42,7 +42,7 @@
             android:fontFamily="@font/kadwa"
             android:text="СПИСАНИЕ ЗА ДЕНЬ"
             android:textAlignment="center"
-            android:textColor="@color/tkl"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="normal" />
@@ -56,7 +56,7 @@
             android:fontFamily="@font/kadwa"
             android:text="СПИСАНИЕ ЗА СМЕНУ"
             android:textAlignment="center"
-            android:textColor="@color/tkl"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="normal" />

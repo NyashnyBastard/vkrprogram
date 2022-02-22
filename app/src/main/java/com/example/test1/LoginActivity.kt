@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
         //configure actionbar
         actionBar = supportActionBar!!
-        actionBar.title = "Welcom to use russblin"
+        actionBar.title = "Добро пожаловать в сессию"
     //configure progress dialog
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please wait...")

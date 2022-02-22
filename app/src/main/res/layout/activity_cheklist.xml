@@ -14,13 +14,13 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:onClick="getBackTo"
             android:id="@+id/getBack"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="40dp"
-            android:background="@color/material_on_background_disabled"
+            android:backgroundTint="@color/material_on_primary_disabled"
             android:foregroundGravity="left"
+            android:onClick="getBackTo"
             android:orientation="vertical"
             app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -43,7 +43,7 @@
             android:text="ЧЕК-ЛИСТ УТРО"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@color/tkl"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="normal" />
@@ -57,7 +57,7 @@
             android:fontFamily="@font/kadwa"
             android:text="ЧЕК-ЛИСТ ОБЕД"
             android:textAlignment="center"
-            android:textColor="@color/tkl"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="normal" />
@@ -71,7 +71,7 @@
             android:fontFamily="@font/kadwa"
             android:text="ЧЕК-ЛИСТ ВЕЧЕР"
             android:textAlignment="center"
-            android:textColor="@color/tkl"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="normal" />
@@ -85,7 +85,7 @@
             android:fontFamily="@font/kadwa"
             android:text="КОНТРОЛЬ НАЧИНОК"
             android:textAlignment="center"
-            android:textColor="@color/tkl"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="normal" />
