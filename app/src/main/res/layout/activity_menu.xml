@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
     android:orientation="vertical"
     tools:context=".MenuActivity">
 
@@ -19,7 +20,8 @@
             android:layout_width="10dp"
             android:layout_height="10dp"
             android:layout_weight="0"
-            android:visibility="invisible" />
+            android:backgroundTint="@color/material_on_background_disabled"/>
+
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -27,7 +29,7 @@
             android:layout_height="100dp"
             android:layout_margin="30dp"
             android:layout_weight="0"
-            android:background="@color/material_on_background_disabled"
+            android:backgroundTint="#00000000"
             app:srcCompat="@drawable/test_messag" />
     </LinearLayout>
 
@@ -84,31 +86,34 @@
             android:text="Button"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/button5"
+        <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="20dp"
             android:layout_weight="0"
-            android:backgroundTint="#009688"
-            android:text="Button" />
+            android:backgroundTint="@color/material_on_primary_disabled"
+            app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="142dp"
         android:layout_weight="0"
-        android:orientation="horizontal"
-        android:visibility="visible">
+        android:backgroundTint="@color/material_on_primary_disabled"
+        android:orientation="horizontal">
+
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:onClick="getOff"
+            android:id="@+id/off"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="250dp"
             android:layout_weight="0"
-            android:background="@color/material_on_background_disabled"
-            app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
+            android:backgroundTint="@color/material_on_primary_disabled"
+            android:src="@drawable/off1"
+            android:text="Button" />
     </LinearLayout>
 
 </LinearLayout>

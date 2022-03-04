@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.example.test1.MenuActivity as MenuActivity1
 
 class MenuActivity : AppCompatActivity() {
 
@@ -11,9 +13,6 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-
-
-
 
     }
     fun callRequest(view: View)
@@ -30,6 +29,10 @@ class MenuActivity : AppCompatActivity() {
     {
         val SpisIntent = Intent(this, spisanieActivity::class.java)
         startActivity(SpisIntent)
+    }
+    fun getOff(view:View){
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
 
 
