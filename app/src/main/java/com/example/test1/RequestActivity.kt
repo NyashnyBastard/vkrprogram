@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
-import com.example.test1.tableForRequest.tabRequestActivity
+import com.example.test1.tableForRequest.ListProductActivity
 
 class RequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class RequestActivity : AppCompatActivity() {
     }
 
     fun toProduct(view: View){
-        val toProductIntent = Intent(this, tabRequestActivity::class.java)
+        val toProductIntent = Intent(this, ListProductActivity::class.java)
         startActivity(toProductIntent)
         finish()
     }
