@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test1">
         <activity
-            android:name=".tableForRequest.tabRequestActivity"
+            android:name=".tableForRequest.ListProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tableForRequest.tabProductActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
