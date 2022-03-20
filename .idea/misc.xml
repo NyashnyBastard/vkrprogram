@@ -6,30 +6,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.10052083333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11197916666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/drawable/ic_baseline_keyboard_backspace_24.xml" value="0.10052083333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11197916666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_authentication.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_chekList.xml" value="0.14492753623188406" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_cheklist.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main2.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main3.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main4.xml" value="0.12" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main5.xml" value="0.12239583333333333" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_menu.xml" value="0.20199275362318841" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_request.xml" value="0.15572916666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_spisanie.xml" value="0.14010416666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_tab_product.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_tab_request.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/activity_tab_request1.xml" value="0.225" />
         <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/custom_dialog_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/elem_item.xml" value="0.18" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/elem_product.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/layout/viewtab.xml" value="0.12409420289855072" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/test1/app/src/main/res/menu/custom_menu.xml" value="0.22" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_menu_request.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_request.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_request_product.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_request_product2.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/activity_spisanie.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/elem_product.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/plans_ite.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/antip/AndroidStudioProjects/vkr/app/src/main/res/layout/plans_item.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>

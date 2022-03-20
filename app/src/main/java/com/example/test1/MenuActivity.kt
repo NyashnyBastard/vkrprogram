@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.example.test1.MenuActivity as MenuActivity1
 
 class MenuActivity : AppCompatActivity() {
 
@@ -17,7 +16,7 @@ class MenuActivity : AppCompatActivity() {
     }
     fun callRequest(view: View)
     {
-        val callRequestIntent = Intent(this, RequestActivity::class.java)
+        val callRequestIntent = Intent(this, MenuRequestActivity::class.java)
         startActivity(callRequestIntent)
     }
     fun chekList(view: View)

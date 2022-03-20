@@ -6,10 +6,10 @@ import android.content.Intent
 import android.view.View
 import com.example.test1.tableForRequest.ListProductActivity
 
-class RequestActivity : AppCompatActivity() {
+class MenuRequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_request)
+        setContentView(R.layout.activity_menu_request)
     }
 
 
