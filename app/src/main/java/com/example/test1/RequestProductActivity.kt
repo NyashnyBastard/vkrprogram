@@ -3,6 +3,7 @@ package com.example.test1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,7 @@ class RequestProductActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.rcProducts)
         val btOk = findViewById<Button>(R.id.butOk)
+        val eData = findViewById<EditText>(R.id.eData)
 
         listProduct = fillList()
 
@@ -28,6 +30,7 @@ class RequestProductActivity : AppCompatActivity() {
         recyclerView.adapter = ProductsAdapter(fillList(), this)
 
         btOk.setOnClickListener {
+            eData.requestFocus()
             val client = AirTableClient()
             client.addNewRequestProduct()
             client.addNewPackProducts(listProduct)
