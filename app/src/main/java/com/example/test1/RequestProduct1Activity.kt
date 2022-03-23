@@ -18,7 +18,7 @@ class RequestProduct1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_product1)
-
+        //kek
         val recyclerView = findViewById<RecyclerView>(R.id.rcProducts)
         val btOk = findViewById<Button>(R.id.butOk)
         val eData = findViewById<EditText>(R.id.eData)
