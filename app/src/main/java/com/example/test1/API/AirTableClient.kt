@@ -67,6 +67,27 @@ class AirTableClient {
         }
         return ArrayList<Product>()
     }
+    fun getProductsFromDrinks1(): ArrayList<Product> {
+        val request = HttpRequest("$url/$nameApp/Drinks1")
+        request.setHeader("Authorization","Bearer $token")
+        request.sendGetRequest()
+
+        try {
+            val listProduct = ArrayList<Product>()
+            val records = JSONArray(request.getResponseBody().getString("records"))
+            for (i in 0 until records.length()) {
+                val record = JSONObject(records[i].toString())
+                val fields = JSONObject(record.getString("fields"))
+                val name = fields.getString("Name")
+                listProduct.add(Product(name))
+            }
+            return listProduct
+        }
+        catch (e:Exception) {
+            println(e.message)
+        }
+        return ArrayList<Product>()
+    }
 
 
     fun getCodePack(): Int {
