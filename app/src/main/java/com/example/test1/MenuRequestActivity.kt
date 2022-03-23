@@ -13,6 +13,7 @@ class MenuRequestActivity : AppCompatActivity() {
     }
 
 
+
     fun getBack(view: View) {
         val getBackIntent = Intent(this, MenuActivity::class.java)
         startActivity(getBackIntent)
@@ -20,8 +21,13 @@ class MenuRequestActivity : AppCompatActivity() {
     }
 
     fun toProduct(view: View){
-        val toProductIntent = Intent(this, ListProductActivity::class.java)
+        val toProductIntent = Intent(this, RequestProductActivity::class.java)
         startActivity(toProductIntent)
+        finish()
+    }
+    fun toDrink(view: View) {
+        val toDrinkIntent = Intent(this, RequestProduct1Activity::class.java)
+        startActivity(toDrinkIntent)
         finish()
     }
 }
