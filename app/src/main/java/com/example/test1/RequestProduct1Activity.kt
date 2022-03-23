@@ -19,7 +19,7 @@ class RequestProduct1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_product1)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.rcProducts)
+        val recyclerView = findViewById<RecyclerView>(R.id.rcDrinks)
         val btOk = findViewById<Button>(R.id.butOk)
         val eData = findViewById<EditText>(R.id.eData)
 
