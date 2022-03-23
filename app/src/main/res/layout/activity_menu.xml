@@ -24,7 +24,7 @@
 
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/messageBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="30dp"

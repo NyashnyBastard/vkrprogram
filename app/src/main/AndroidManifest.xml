@@ -12,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test1">
         <activity
-            android:name=".tableForRequest.ListProductActivity"
+
+            android:name=".RequestProduct1Activity"
             android:exported="false" />
         <activity
-            android:name=".tableForRequest.tabProductActivity"
-            android:exported="false" />
+            android:name=".RequestProductActivity"
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -36,7 +37,7 @@
             android:name=".cheklistActivity"
             android:exported="false" />
         <activity
-            android:name=".RequestActivity"
+            android:name=".MenuRequestActivity"
             android:exported="false" />
 
         <meta-data
