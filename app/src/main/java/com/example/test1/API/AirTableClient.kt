@@ -45,6 +45,21 @@ class AirTableClient {
         request.setHeader("Authorization","Bearer $token")
         request.sendPostRequest()
     }
+    fun addNewPackDrinks(products:List<Product>) {
+        val request = HttpRequest("$url/$nameApp/PackDrinks")
+
+        var body = "{\"records\":["
+        for (product in products) {
+            body += "{\"fields\":{\"CodePack\":$codePack," +
+                    "\"Product\":\"${product.title}\",\"Count\":\"${product.count}\"}},"
+        }
+
+        body = body.subSequence(0,body.length-1).toString()
+        body+="]}"
+        request.setRequestBody(body)
+        request.setHeader("Authorization","Bearer $token")
+        request.sendPostRequest()
+    }
 
     fun getProductsFromWarehouse(): ArrayList<Product> {
         val request = HttpRequest("$url/$nameApp/Warehouse")

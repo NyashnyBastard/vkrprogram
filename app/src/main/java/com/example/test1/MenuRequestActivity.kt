@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
-import com.example.test1.tableForRequest.ListProductActivity
 
 class MenuRequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

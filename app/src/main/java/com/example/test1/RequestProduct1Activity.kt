@@ -32,7 +32,7 @@ class RequestProduct1Activity : AppCompatActivity() {
             eData.requestFocus()
             val client = AirTableClient()
             client.addNewRequestProduct()
-            client.addNewPackProducts(listProduct)
+            client.addNewPackDrinks(listProduct)
         }
 
     }
