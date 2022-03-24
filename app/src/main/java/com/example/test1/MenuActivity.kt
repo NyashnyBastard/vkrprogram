@@ -30,20 +30,20 @@ class MenuActivity : AppCompatActivity() {
 
 
     }
-    fun callRequest(view: View)
-    {
+    fun callRequest(view: View){
         val callRequestIntent = Intent(this, MenuRequestActivity::class.java)
         startActivity(callRequestIntent)
+        finish()
     }
-    fun chekList(view: View)
-    {
+    fun chekList(view: View){
         val chekListIntent = Intent(this,cheklistActivity::class.java)
         startActivity(chekListIntent)
+        finish()
     }
-    fun Spis(view:View)
-    {
+    fun Spis(view:View){
         val SpisIntent = Intent(this, spisanieActivity::class.java)
         startActivity(SpisIntent)
+        finish()
     }
     fun getOff(view:View){
         FirebaseAuth.getInstance().signOut()

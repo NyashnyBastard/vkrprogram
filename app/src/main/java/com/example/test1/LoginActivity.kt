@@ -34,8 +34,8 @@ class LoginActivity : AppCompatActivity() {
         actionBar.title = "Добро пожаловать в сессию"
     //configure progress dialog
         progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Please wait...")
-        progressDialog.setMessage("Logging in...")
+        progressDialog.setTitle("Пожалуйста подождите...")
+        progressDialog.setMessage("Проверка...")
         progressDialog.setCanceledOnTouchOutside(false)
 
         //init firebaseAuth
@@ -57,11 +57,11 @@ class LoginActivity : AppCompatActivity() {
         //validate data
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             //invalid email format
-            binding.emailEt.error = "Invalid email format"
+            binding.emailEt.error = "Неправильно ввели email"
         }
             else if(TextUtils.isEmpty(password)){
                 // no password entered
-                binding.passwordEt.error = "Please enter password"
+                binding.passwordEt.error = "Пожалуйста, введите пароль"
             }
             else {
                 //data is validated, begin login
@@ -80,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
                 //get uwer info
                 val firebaseUser = firebaseAuth.currentUser
                 val email = firebaseUser!!.email
-                Toast.makeText(this, "LoggedIn as $email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Вы вошли под адресом $email", Toast.LENGTH_SHORT).show()
                 //open menuActivity
                 startActivity(Intent(this, MenuActivity::class.java))
                 finish()
@@ -88,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnFailureListener { e->
                 //login failed
                 progressDialog.dismiss()
-                Toast.makeText(this,"Login failed due to ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Ошибка при вводе email ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 

@@ -16,7 +16,7 @@ class MenuRequestActivity : AppCompatActivity() {
     fun getBack(view: View) {
         val getBackIntent = Intent(this, MenuActivity::class.java)
         startActivity(getBackIntent)
-        finishAffinity()
+        finish()
     }
 
     fun toProduct(view: View){
