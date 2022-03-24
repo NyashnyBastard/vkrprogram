@@ -4,18 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#FFFFFF"
-    tools:context=".RequestProductActivity">
-
-
+    tools:context=".RequestProduct2Activity">
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:text="Количество продуктов указывается  в кг, л и шт."
+        android:text="Заявка на склад отправляется на утро второго дня смены"
         android:textAlignment="center"
         android:textColor="#0B0A0A"
         android:textStyle="bold"
@@ -47,7 +43,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="Заявка по напиткам"
+            android:text="Заявка по складу"
             android:textColor="#0C0C0C" />
 
         <EditText
