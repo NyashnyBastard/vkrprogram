@@ -24,9 +24,23 @@ class MenuRequestActivity : AppCompatActivity() {
         startActivity(toProductIntent)
         finish()
     }
+
     fun toDrink(view: View) {
         val toDrinkIntent = Intent(this, RequestProduct1Activity::class.java)
         startActivity(toDrinkIntent)
         finish()
     }
+
+    fun toStorehouse(view:View){
+        val toStorehouseIntent = Intent(this,RequestProduct2Activity::class.java)
+        startActivity(toStorehouseIntent)
+        finish()
+    }
+    fun toDetergents(view: View){
+        val toDetergentsIntent = Intent(this, RequestProduct3Activity::class.java)
+        startActivity(toDetergentsIntent)
+        finish()
+
+    }
+
 }

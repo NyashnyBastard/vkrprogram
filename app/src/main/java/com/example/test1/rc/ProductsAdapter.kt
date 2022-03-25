@@ -35,24 +35,39 @@ class ProductsAdapter(val products: List<Product>, _context:Context):RecyclerVie
     }
 
     override fun onBindViewHolder(holder: PlantHolder, position: Int) {
-        val product = products.get(position)
-        holder.bind(product,context)
+
+        val drink = products.get(position)
+        holder.bind(drink, context)
         holder.editCount.setOnFocusChangeListener { view, isFocus ->
             if (!isFocus) {
                 println("#lost")
                 try {
-                    val product = products.get(position)
-                    product.count = holder.editCount.text.toString().toInt()
+                    val drink = products.get(position)
+                    drink.count = holder.editCount.text.toString().toInt()
                     println(products)
                     (context as RequestProductActivity).setNewListProduct(products)
-                }
-                catch (e:Exception) {
+                } catch (e: Exception) {
                     println(e.message)
                 }
             }
+            val product = products.get(position)
+            holder.bind(product, context)
+            holder.editCount.setOnFocusChangeListener { view, isFocus ->
+                if (!isFocus) {
+                    println("#lost")
+                    try {
+                        val product = products.get(position)
+                        product.count = holder.editCount.text.toString().toInt()
+                        println(products)
+                        (context as RequestProductActivity).setNewListProduct(products)
+                    } catch (e: Exception) {
+                        println(e.message)
+                    }
+                }
+            }
         }
-
     }
+
 
     override fun getItemCount(): Int {
         return products.size

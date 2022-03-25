@@ -31,7 +31,7 @@ class RequestProduct1Activity : AppCompatActivity() {
         btOk.setOnClickListener {
             eData.requestFocus()
             val client = AirTableClient()
-            client.addNewRequestProduct()
+            client.addNewRequestDrinks()
             client.addNewPackDrinks(listProduct)
         }
 

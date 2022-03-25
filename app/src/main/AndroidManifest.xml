@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test1">
         <activity
+            android:name=".RequestProduct3Activity"
+            android:exported="false" />
+        <activity
             android:name=".chekList.ChekList1Activity"
             android:exported="false" />
         <activity
@@ -19,10 +22,10 @@
             android:exported="false" />
         <activity
             android:name=".RequestProductActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RequestProduct1Activity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

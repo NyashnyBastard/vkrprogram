@@ -71,6 +71,7 @@
             app:checkedIconEnabled="true" />
 
         <com.google.android.material.chip.Chip
+            android:onClick="toStorehouse"
             android:id="@+id/chip10"
             android:layout_width="300dp"
             android:layout_height="80dp"
@@ -88,7 +89,8 @@
             app:checkedIconEnabled="true" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip11"
+            android:onClick="toDetergents"
+            android:id="@+id/toDetergents1"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"

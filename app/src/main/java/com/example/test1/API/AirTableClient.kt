@@ -29,6 +29,24 @@ class AirTableClient {
         }
 
     }
+    fun addNewRequestDrinks() {
+        val request = HttpRequest("$url/$nameApp/RequestDrinks")
+        request.setRequestBody("{\"records\": [{\"fields\": {\"DateRequest\": \"2022-03-19\"}}],\"typecast\": true}")
+        request.setHeader("Authorization","Bearer $token")
+        request.sendPostRequest()
+        try{
+            val records = JSONArray(request.getResponseBody().getString("records"))
+            val record = JSONObject(records[0].toString())
+            val fields = JSONObject(record.getString("fields"))
+            val codePackDrinks = fields.getString("CodePackDrinks")
+            codePack = codePackDrinks
+        }
+        catch (e:Exception) {
+            println(e.message)
+        }
+
+    }
+
 
 
     fun addNewPackProducts(products:List<Product>) {
@@ -48,6 +66,36 @@ class AirTableClient {
     }
     fun addNewPackDrinks(products:List<Product>) {
         val request = HttpRequest("$url/$nameApp/PackDrinks")
+
+        var body = "{\"records\":["
+        for (drink in products) {
+            body += "{\"fields\":{\"CodePack\":$codePack," +
+                    "\"Product\":\"${drink.title}\",\"Count\":\"${drink.count}\"}},"
+        }
+
+        body = body.subSequence(0,body.length-1).toString()
+        body+="]}"
+        request.setRequestBody(body)
+        request.setHeader("Authorization","Bearer $token")
+        request.sendPostRequest()
+    }
+    fun addNewPackStorehouse(products:List<Product>) {
+        val request = HttpRequest("$url/$nameApp/PackStorehouse")
+
+        var body = "{\"records\":["
+        for (product in products) {
+            body += "{\"fields\":{\"CodePack\":$codePack," +
+                    "\"Product\":\"${product.title}\",\"Count\":\"${product.count}\"}},"
+        }
+
+        body = body.subSequence(0,body.length-1).toString()
+        body+="]}"
+        request.setRequestBody(body)
+        request.setHeader("Authorization","Bearer $token")
+        request.sendPostRequest()
+    }
+    fun addNewPackDetergents(products:List<Product>) {
+        val request = HttpRequest("$url/$nameApp/PackDetergents")
 
         var body = "{\"records\":["
         for (product in products) {
@@ -102,6 +150,46 @@ class AirTableClient {
         catch (e:Exception) {
             println(e.message)
         }
+        return ArrayList<Product>()
+    }
+    fun getProductsFromStorehouse(): ArrayList<Product> {
+        val request = HttpRequest("$url/$nameApp/Storehouse")
+        request.setHeader("Authorization","Bearer $token")
+        request.sendGetRequest()
+
+        try {
+            val listProduct = ArrayList<Product>()
+            val records = JSONArray(request.getResponseBody().getString("records"))
+            for (i in 0 until records.length()) {
+                val record = JSONObject(records[i].toString())
+                val fields = JSONObject(record.getString("fields"))
+                val name = fields.getString("Name")
+                listProduct.add(Product(name))
+            }
+            return listProduct
+        }
+        catch (e:Exception) {
+            println(e.message)        }
+        return ArrayList<Product>()
+    }
+    fun getProductsFromDetergents(): ArrayList<Product> {
+        val request = HttpRequest("$url/$nameApp/Detergents")
+        request.setHeader("Authorization","Bearer $token")
+        request.sendGetRequest()
+
+        try {
+            val listProduct = ArrayList<Product>()
+            val records = JSONArray(request.getResponseBody().getString("records"))
+            for (i in 0 until records.length()) {
+                val record = JSONObject(records[i].toString())
+                val fields = JSONObject(record.getString("fields"))
+                val name = fields.getString("Name")
+                listProduct.add(Product(name))
+            }
+            return listProduct
+        }
+        catch (e:Exception) {
+            println(e.message)        }
         return ArrayList<Product>()
     }
 

@@ -1,7 +1,9 @@
 package com.example.test1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.core.view.get
@@ -46,4 +48,5 @@ class RequestProductActivity : AppCompatActivity() {
     public fun setNewListProduct(_listProduct:List<Product>) {
         listProduct = _listProduct.filter { it.count!=0 }
     }
+
 }
