@@ -21,25 +21,33 @@ class MenuRequestActivity : AppCompatActivity() {
 
     fun toProduct(view: View){
         val toProductIntent = Intent(this, RequestProductActivity::class.java)
+        toProductIntent.putExtra("Table","Products")
+        toProductIntent.putExtra("Warehouse","Warehouse")
         startActivity(toProductIntent)
         finish()
     }
 
     fun toDrink(view: View) {
-        //val toDrinkIntent = Intent(this, RequestProduct1Activity::class.java)
-        //startActivity(toDrinkIntent)
-        //finish()
+        val toProductIntent = Intent(this, RequestProductActivity::class.java)
+        toProductIntent.putExtra("Table","Drinks")
+        toProductIntent.putExtra("Warehouse","DrinksStock")
+        startActivity(toProductIntent)
+        finish()
     }
 
     fun toStorehouse(view:View){
-        //val toStorehouseIntent = Intent(this,RequestProduct2Activity::class.java)
-        //startActivity(toStorehouseIntent)
-        //finish()
+        val toProductIntent = Intent(this, RequestProductActivity::class.java)
+        toProductIntent.putExtra("Table","Storehouse")
+        toProductIntent.putExtra("Warehouse","Storehouse")
+        startActivity(toProductIntent)
+        finish()
     }
     fun toDetergents(view: View){
-        //val toDetergentsIntent = Intent(this, RequestProduct3Activity::class.java)
-        //startActivity(toDetergentsIntent)
-        //finish()
+        val toProductIntent = Intent(this, RequestProductActivity::class.java)
+        toProductIntent.putExtra("Table","Detergents")
+        toProductIntent.putExtra("Warehouse","Detergents")
+        startActivity(toProductIntent)
+        finish()
 
     }
 

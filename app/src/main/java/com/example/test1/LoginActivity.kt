@@ -1,6 +1,7 @@
 package com.example.test1
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -70,6 +71,15 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    private fun addEmailPreference(email:String) {
+        var prefs = this.getSharedPreferences(
+            getString(R.string.email), Context.MODE_PRIVATE)
+        with(prefs.edit()) {
+            putString(getString(R.string.email), "pobeda20@gmail.com")
+            apply()
+        }
+    }
+
     private fun firebaseLogin() {
         //show progress
         progressDialog.show()
@@ -81,6 +91,7 @@ class LoginActivity : AppCompatActivity() {
                 val firebaseUser = firebaseAuth.currentUser
                 val email = firebaseUser!!.email
                 Toast.makeText(this, "Вы вошли под адресом $email", Toast.LENGTH_SHORT).show()
+                addEmailPreference(email.toString())
                 //open menuActivity
                 startActivity(Intent(this, MenuActivity::class.java))
                 finish()
