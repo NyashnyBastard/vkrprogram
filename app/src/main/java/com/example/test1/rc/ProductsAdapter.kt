@@ -21,7 +21,12 @@ class ProductsAdapter(val products: List<Product>, _context:Context):RecyclerVie
         val editCount:TextView = item.findViewById(R.id.editCount)
         fun bind(product:Product, context: Context) {
             textTitle.text = product.title
-            editCount.text = product.count.toString()
+            if (product.count>0) {
+                editCount.text = product.count.toString()
+            }
+            else{
+                editCount.text = ""
+            }
 
         }
 
@@ -35,34 +40,18 @@ class ProductsAdapter(val products: List<Product>, _context:Context):RecyclerVie
     }
 
     override fun onBindViewHolder(holder: PlantHolder, position: Int) {
-
-        val drink = products.get(position)
-        holder.bind(drink, context)
+        val product = products.get(position)
+        holder.bind(product, context)
         holder.editCount.setOnFocusChangeListener { view, isFocus ->
             if (!isFocus) {
                 println("#lost")
                 try {
-                    val drink = products.get(position)
-                    drink.count = holder.editCount.text.toString().toInt()
-                    println(products)
+                    val product = products.get(position)
+                    product.count = holder.editCount.text.toString().toFloat()
                     (context as RequestProductActivity).setNewListProduct(products)
+                    println(products)
                 } catch (e: Exception) {
                     println(e.message)
-                }
-            }
-            val product = products.get(position)
-            holder.bind(product, context)
-            holder.editCount.setOnFocusChangeListener { view, isFocus ->
-                if (!isFocus) {
-                    println("#lost")
-                    try {
-                        val product = products.get(position)
-                        product.count = holder.editCount.text.toString().toInt()
-                        println(products)
-                        (context as RequestProductActivity).setNewListProduct(products)
-                    } catch (e: Exception) {
-                        println(e.message)
-                    }
                 }
             }
         }

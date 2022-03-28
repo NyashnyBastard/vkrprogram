@@ -4,7 +4,12 @@ import com.example.test1.models.Product
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
+import java.text.SimpleDateFormat
 import kotlin.random.Random
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
 
 class AirTableClient {
     private val token = "keymsgRIVkfzhm17E"
@@ -14,7 +19,13 @@ class AirTableClient {
 
     fun addNewRequestProduct() {
         val request = HttpRequest("$url/$nameApp/Requests")
-        request.setRequestBody("{\"records\": [{\"fields\": {\"DateRequest\": \"2022-03-19\"}}],\"typecast\": true}")
+
+        val sdf = SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH)
+        val nowDate = sdf.parse(Calendar.getInstance().time.toString())
+        sdf.applyPattern("yyyy-MM-dd")
+        val now = sdf.format(nowDate)
+
+        request.setRequestBody("{\"records\": [{\"fields\": {\"DateRequest\": \"$now\"}}],\"typecast\": true}")
         request.setHeader("Authorization","Bearer $token")
         request.sendPostRequest()
         try{
@@ -51,18 +62,25 @@ class AirTableClient {
 
     fun addNewPackProducts(products:List<Product>) {
         val request = HttpRequest("$url/$nameApp/PackProducts")
+        for (i in 0..products.size step 10) {
+            var end = i+10
+            if (i+10>products.size) {
+                end = products.size
+            }
+            val partProducts = products.subList(i,end)
+            var body = "{\"records\":["
+            for (product in partProducts) {
+                product.title = product.title.replace("\"","\\\"")
+                body += "{\"fields\":{\"CodePack\":$codePack," +
+                        "\"Product\":\"${product.title}\",\"Count\":\"${product.count}\"}},"
+            }
 
-        var body = "{\"records\":["
-        for (product in products) {
-            body += "{\"fields\":{\"CodePack\":$codePack," +
-                    "\"Product\":\"${product.title}\",\"Count\":\"${product.count}\"}},"
+            body = body.subSequence(0, body.length - 1).toString()
+            body += "]}"
+            request.setRequestBody(body)
+            request.setHeader("Authorization", "Bearer $token")
+            request.sendPostRequest()
         }
-
-        body = body.subSequence(0,body.length-1).toString()
-        body+="]}"
-        request.setRequestBody(body)
-        request.setHeader("Authorization","Bearer $token")
-        request.sendPostRequest()
     }
     fun addNewPackDrinks(products:List<Product>) {
         val request = HttpRequest("$url/$nameApp/PackDrinks")

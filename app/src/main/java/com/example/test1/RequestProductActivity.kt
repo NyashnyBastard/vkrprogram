@@ -1,18 +1,18 @@
 package com.example.test1
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import androidx.core.view.get
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test1.API.AirTableClient
 import com.example.test1.databinding.ActivityRequestProductBinding
 import com.example.test1.models.Product
 import com.example.test1.rc.ProductsAdapter
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class RequestProductActivity : AppCompatActivity() {
     public lateinit var binding: ActivityRequestProductBinding
@@ -25,7 +25,6 @@ class RequestProductActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.rcProducts)
         val btOk = findViewById<Button>(R.id.butOk)
         val eData = findViewById<EditText>(R.id.eData)
-
         listProduct = fillList()
 
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -37,7 +36,7 @@ class RequestProductActivity : AppCompatActivity() {
             client.addNewRequestProduct()
             client.addNewPackProducts(listProduct)
         }
-
+        setNewListProduct(listProduct)
     }
 
     private fun fillList(): List<Product> {
@@ -45,8 +44,9 @@ class RequestProductActivity : AppCompatActivity() {
         return client.getProductsFromWarehouse()
     }
 
-    public fun setNewListProduct(_listProduct:List<Product>) {
-        listProduct = _listProduct.filter { it.count!=0 }
+    fun setNewListProduct(_listProduct:List<Product>) {
+        println("#sa")
+        listProduct = _listProduct.filter {  it.count>0f }
     }
 
 }
