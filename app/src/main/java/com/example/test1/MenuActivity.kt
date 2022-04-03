@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -36,12 +35,12 @@ class MenuActivity : AppCompatActivity() {
         finish()
     }
     fun chekList(view: View){
-        val chekListIntent = Intent(this,cheklistActivity::class.java)
+        val chekListIntent = Intent(this,MenuCheckListActivity::class.java)
         startActivity(chekListIntent)
         finish()
     }
     fun Spis(view:View){
-        val SpisIntent = Intent(this, spisanieActivity::class.java)
+        val SpisIntent = Intent(this, SpisanieActivity::class.java)
         startActivity(SpisIntent)
         finish()
     }

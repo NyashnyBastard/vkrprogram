@@ -61,7 +61,4 @@ class ProductsAdapter(val products: List<Product>, _context:Context):RecyclerVie
     override fun getItemCount(): Int {
         return products.size
     }
-    fun getListProduct(): List<Product> {
-        return products
-    }
 }

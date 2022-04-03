@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         var prefs = this.getSharedPreferences(
             getString(R.string.email), Context.MODE_PRIVATE)
         with(prefs.edit()) {
-            putString(getString(R.string.email), "pobeda20@gmail.com")
+            putString(getString(R.string.email), email)
             apply()
         }
     }

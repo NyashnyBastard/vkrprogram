@@ -39,10 +39,9 @@ class RequestProductActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.rcProducts)
         val btOk = findViewById<Button>(R.id.butOk)
         val eData = findViewById<EditText>(R.id.eData)
-        listProduct = fillList()
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ProductsAdapter(fillList(), this)
+        recyclerView.adapter = ProductsAdapter(listProduct, this)
 
         btOk.setOnClickListener {
             eData.requestFocus()

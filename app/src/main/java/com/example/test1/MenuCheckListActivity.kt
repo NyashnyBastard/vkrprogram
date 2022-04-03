@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class cheklistActivity : AppCompatActivity() {
+class MenuCheckListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cheklist)
+        setContentView(R.layout.activity_menu_cheklist)
     }
     fun getBackTo(view: View)
     {
