@@ -1,8 +1,10 @@
 package com.example.test1
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -16,20 +18,21 @@ import com.example.test1.rc.ProductsAdapter
 
 class RequestProductActivity : AppCompatActivity() {
     public lateinit var binding: ActivityRequestProductBinding
-    lateinit var adapter:ProductsAdapter
-    lateinit var listProduct:List<Product>
-    private lateinit var namePos:String
-    private lateinit var table:String
-    private lateinit var warehouse:String
+    lateinit var adapter: ProductsAdapter
+    lateinit var listProduct: List<Product>
+    private lateinit var namePos: String
+    private lateinit var table: String
+    private lateinit var warehouse: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_product)
 
         var prefs = this.getSharedPreferences(
-            getString(R.string.email), Context.MODE_PRIVATE)
+            getString(R.string.email), Context.MODE_PRIVATE
+        )
 
-        val email:String = prefs.getString(getString(R.string.email),"").toString()
+        val email: String = prefs.getString(getString(R.string.email), "").toString()
         val clientPos = AirTableClient()
         namePos = clientPos.getPos(email)
 
@@ -38,7 +41,7 @@ class RequestProductActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.rcProducts)
         val btOk = findViewById<Button>(R.id.butOk)
-        val eData = findViewById<EditText>(R.id.eData)
+        val eData = findViewById<Button>(R.id.eData)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = ProductsAdapter(listProduct, this)
@@ -57,9 +60,15 @@ class RequestProductActivity : AppCompatActivity() {
         return client.getProductsFromTable(warehouse)
     }
 
-    fun setNewListProduct(_listProduct:List<Product>) {
+    fun setNewListProduct(_listProduct: List<Product>) {
         println("#sa")
-        listProduct = _listProduct.filter {  it.count>0f }
+        listProduct = _listProduct.filter { it.count > 0f }
+    }
+
+    fun menu(view: View) {
+    val menuIntent = Intent(this, MenuRequestActivity::class.java)
+    startActivity(menuIntent)
+    finish()
     }
 
 }

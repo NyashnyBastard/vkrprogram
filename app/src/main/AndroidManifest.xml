@@ -14,36 +14,30 @@
 
         <activity
             android:name=".chekList.CheckListActivity"
-            android:exported="true" >
-
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            android:exported="true" />
 
         <activity
             android:name=".RequestProductActivity"
             android:exported="true" />
         <activity
             android:name=".MenuRequestActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
 
         <activity
             android:name=".LoginActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".SpisanieActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MenuCheckListActivity"
+            android:name=".NoteActivity"
             android:exported="false" />
 
         <meta-data

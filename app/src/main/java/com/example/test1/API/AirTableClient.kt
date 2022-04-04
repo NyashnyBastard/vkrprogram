@@ -133,6 +133,7 @@ class AirTableClient {
                 val record = JSONObject(records[i].toString())
                 val fields = JSONObject(record.getString("fields"))
                 val name = fields.getString("Name")
+
                 listProduct.add(Product(name))
             }
             return listProduct

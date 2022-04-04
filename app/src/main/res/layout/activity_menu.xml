@@ -44,8 +44,7 @@
             android:id="@+id/request_b"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="80dp"
             android:layout_weight="0"
             android:background="@drawable/ic_baseline_article_24"
             android:backgroundTint="#009688"
@@ -78,21 +77,13 @@
             android:id="@+id/forgiveness"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="140dp"
             android:layout_weight="0"
             android:background="@drawable/ic_baseline_assignment_late_24"
             android:backgroundTint="#009688"
             android:onClick="Spis"
             android:text="Button"
             tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="0"
-            android:backgroundTint="@color/material_on_primary_disabled"
-            app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
 
     </LinearLayout>
 

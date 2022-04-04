@@ -50,15 +50,15 @@
             android:text="Заявка по напиткам"
             android:textColor="#0C0C0C" />
 
-        <EditText
+        <Button
+            android:onClick="menu"
             android:id="@+id/eData"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:ems="10"
-            android:hint="Дата"
-            android:inputType="number"
-            android:textColor="#0C0C0C" />
+            android:text="МЕНЮ" />
 
         <Button
 

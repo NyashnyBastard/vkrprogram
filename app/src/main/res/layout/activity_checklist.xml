@@ -18,8 +18,17 @@
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:fontFamily="@font/kadwa"
-            android:text="Чек-лист Утро заполняется с 9:00-10:00"
+            android:text="Чек-лист"
             android:textColor="#0E0606" />
+
+        <Button
+            android:onClick="btMenu"
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:text="меню" />
 
         <Button
             android:id="@+id/btOk"

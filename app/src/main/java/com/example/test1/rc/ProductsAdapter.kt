@@ -19,8 +19,10 @@ class ProductsAdapter(val products: List<Product>, _context:Context):RecyclerVie
     class PlantHolder(item: View):RecyclerView.ViewHolder(item) {
         val textTitle:TextView = item.findViewById(R.id.textTitle)
         val editCount:TextView = item.findViewById(R.id.editCount)
+
         fun bind(product:Product, context: Context) {
             textTitle.text = product.title
+
             if (product.count>0) {
                 editCount.text = product.count.toString()
             }

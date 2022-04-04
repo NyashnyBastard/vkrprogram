@@ -8,15 +8,15 @@
 
     <ImageView
         android:id="@+id/view2"
-        android:layout_width="200dp"
-        android:layout_height="250dp"
+        android:layout_width="120dp"
+        android:layout_height="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114"
-        app:srcCompat="@drawable/rb" />
+        app:layout_constraintVertical_bias="0.273"
+        app:srcCompat="@drawable/version1" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/emailEt"
@@ -34,6 +34,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Password"
+        android:password="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

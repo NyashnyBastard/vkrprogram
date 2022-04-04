@@ -1,20 +1,19 @@
 package com.example.test1.chekList
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test1.API.AirTableClient
+import com.example.test1.MenuActivity
 import com.example.test1.R
 import com.example.test1.models.CheckItem
-import com.example.test1.models.Product
 import com.example.test1.rc.CheckListAdapter
-import com.example.test1.rc.ProductsAdapter
-import java.util.ArrayList
 
 class CheckListActivity : AppCompatActivity() {
     private lateinit var namePos: String
@@ -46,6 +45,7 @@ class CheckListActivity : AppCompatActivity() {
         table = "CheckList1"
         warehouse = "CheckList1"
 
+
         btOk.setOnClickListener {
             if (checkAllFilled()) {
                 val client = AirTableClient()
@@ -61,7 +61,9 @@ class CheckListActivity : AppCompatActivity() {
     private fun fillList(): List<CheckItem> {
         val client = AirTableClient()
         return client.getCheckList("ChekList1");
+
     }
+
 
     fun setNewCheckList(_checkList:List<CheckItem>) {
         checkList = _checkList
@@ -69,5 +71,10 @@ class CheckListActivity : AppCompatActivity() {
 
     fun checkAllFilled():Boolean {
         return checkList.filter { it.state == 0 }.isEmpty()
+    }
+    fun btMenu(view: View){
+        val btMenuIntent = Intent(this, MenuActivity::class.java)
+        startActivity(btMenuIntent)
+        finish()
     }
 }
