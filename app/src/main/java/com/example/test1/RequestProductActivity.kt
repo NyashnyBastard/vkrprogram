@@ -43,6 +43,8 @@ class RequestProductActivity : AppCompatActivity() {
         val btOk = findViewById<Button>(R.id.butOk)
         val eData = findViewById<Button>(R.id.eData)
 
+        listProduct = fillList()
+
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = ProductsAdapter(listProduct, this)
 
