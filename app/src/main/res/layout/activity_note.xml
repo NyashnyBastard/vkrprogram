@@ -8,10 +8,13 @@
     tools:context=".NoteActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
             android:id="@+id/getBack1"
@@ -23,6 +26,32 @@
             android:onClick="getBack11"
             app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
             tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="sans-serif"
+            android:text="Напоминание по составлению заявки и чек-листов\n\nЗаявка на продукты в обед отправляется с 13:00-14:00, а на следующее утро с 18:00-19:00.\nЗаявка на напитки отправляется в первый день смены на обед.\nЗаявка на склад отравляется на утро второго дня смены.\nЗаявка на химию заполняется  на утро третьего дня смены.\nЧек-листы заполняются три раза в день. Утром 09:00-10:00, в обед 14:00-15:00, вечером 19:00-20:00."
+            android:textAlignment="textStart"
+            android:textColor="#0E0C0C"
+            android:textSize="16sp"
+            android:typeface="normal" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,7 @@ class MenuActivity : AppCompatActivity() {
         startActivity(chekListIntent)
         finish()
     }
-    fun Spis(view:View){
+    fun Note(view:View){
         val SpisIntent = Intent(this, NoteActivity::class.java)
         startActivity(SpisIntent)
         finish()

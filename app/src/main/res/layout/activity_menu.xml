@@ -74,14 +74,14 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/forgiveness"
+            android:id="@+id/Note"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="140dp"
             android:layout_weight="0"
             android:background="@drawable/ic_baseline_assignment_late_24"
             android:backgroundTint="#009688"
-            android:onClick="Spis"
+            android:onClick="Note"
             android:text="Button"
             tools:ignore="SpeakableTextPresentCheck" />
 
