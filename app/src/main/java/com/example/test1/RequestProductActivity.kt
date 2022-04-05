@@ -7,6 +7,7 @@ import android.preference.PreferenceManager
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -53,7 +54,10 @@ class RequestProductActivity : AppCompatActivity() {
             val client = AirTableClient()
             client.addNewRequest(table, namePos)
             client.addNewPack(table, listProduct)
+            Toast.makeText(this, "Заявка отправлена!", Toast.LENGTH_SHORT).show()
+
         }
+
         setNewListProduct(listProduct)
     }
 

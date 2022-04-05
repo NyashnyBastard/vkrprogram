@@ -51,6 +51,8 @@ class CheckListActivity : AppCompatActivity() {
                 val client = AirTableClient()
                 client.addNewReport(table, namePos)
                 client.addNewReportInfo(table, checkList)
+                Toast.makeText(this, "Чек-лист заполнен!", Toast.LENGTH_SHORT).show()
+
             }
             else {
                 Toast.makeText(this, "Вы не заполнили один или несколько пунктов!", Toast.LENGTH_LONG).show()
